@@ -1,0 +1,57 @@
+Source Code yang ada disini dijalanin di laptop pake Xampp 8.0.30. 
+Kalau mau pakai CodeIgniter3 dan Xampp nya 8.2 tambah kode di beberapa file
+
+Kodenya ditaruh tepat diatas class
+kalau ditaruh dipaling atas error
+
+Sumber : Github
+For now I think the shortest way is approach 2.
+To implement #[\AllowDynamicProperties] in the classes.
+For now I have seen 5 places where to add #[\AllowDynamicProperties] to get a working website.
+
+/system/core/URI.php
+
+#[\AllowDynamicProperties]
+
+class CI_URI {
+/system/core/Router.php
+
+#[\AllowDynamicProperties]
+
+class CI_Router {
+/system/core/Loader.php
+
+#[\AllowDynamicProperties]
+
+class CI_Loader {
+/system/core/Controller.php
+
+#[\AllowDynamicProperties]
+
+class CI_Controller {     
+/system/core/DB_driver.php - - salah
+/system/database/DB_driver.php - - benar
+
+#[\AllowDynamicProperties]
+
+abstract class CI_DB_driver {
+
+
+
+
+
+
+
+
+
+
+
+Dokumentasi PHP
+  /**
+     * Mengambil data admin berdasarkan username
+     * @todo Ambil data admin
+     * @return array 
+     * @param string $where kondisi
+     */
+public function ….
+
