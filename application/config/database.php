@@ -1,6 +1,10 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
+$hostname = getenv("HOSTNAME");
+$username = getenv("USERNAME");
+$database = getenv("DATABASE");
+
 /*
 | -------------------------------------------------------------------
 | DATABASE CONNECTIVITY SETTINGS
@@ -75,10 +79,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn' => '',
-	'hostname' => 'localhost',
-	'username' => 'root',
+	'hostname' => $hostname,
+	'username' => $username,
 	'password' => '',
-	'database' => 'db_ow_jewepe',
+	'database' => $database,
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
