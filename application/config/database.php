@@ -2,6 +2,7 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 $hostname = getenv("HOSTNAME");
+$password = getenv("PASSWORD");
 $username = getenv("USERNAME");
 $database = getenv("DATABASE");
 
@@ -81,7 +82,7 @@ $db['default'] = array(
 	'dsn' => '',
 	'hostname' => $hostname,
 	'username' => $username,
-	'password' => '',
+	'password' => $password,
 	'database' => $database,
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
